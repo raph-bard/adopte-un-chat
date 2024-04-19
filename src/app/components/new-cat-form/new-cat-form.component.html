@@ -1,0 +1,22 @@
+<h2 class="mb-4">Créer un chaton:</h2>
+<form action="/add-kitten" method="POST" (ngSubmit)="sendNewCatToParent()" #newCatForm>
+  <div class="d-flex justify-center gap-4 mb-2">
+    <label for="name">Nom du chaton :</label>
+    <input [(ngModel)]="newCat.name" type="text" id="name" name="name" required />
+  </div>
+  <div class="d-flex justify-center gap-4 mb-2">
+    <label for="breed">Race du chaton :</label>
+    <input [(ngModel)]="newCat.breed" type="text" id="breed" name="breed" required />
+  </div>
+  <div class="d-flex justify-center gap-4 mb-2">
+    <label for="birth_date">Date de naissance :</label>
+    <input [(ngModel)]="newCat.birthDate" type="date" id="birth_date" name="birth_date" required />
+  </div>
+  <div class="d-flex justify-center gap-4 mb-2">
+    <label for="photo">Lien vers la photo :</label>
+    <input [(ngModel)]="newCat.imgUrl" type="url" id="photo" name="photo" required />
+  </div>
+  <div>
+    <button type="submit">Créer le chaton</button>
+  </div>
+</form>
